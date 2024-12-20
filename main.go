@@ -2,9 +2,14 @@ package main
 
 import "fmt"
 
-func Ola(n string) string {
-  return "Ola, " + n
+const prefix = "Hello, "
+
+func Hello(n string) string {
+  if n == "" {
+    n = "unknown"
+  }
+  return prefix + n
 }
 func main(){
-  fmt.Println(Ola("Quint"))
+  fmt.Println(Hello("Quint"))
 }
